@@ -10,27 +10,117 @@
     <div id="header">
       <div class="container">
         <nav>
-            <img src="images/logo.png" class="logo">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-
-            </ul>
+          <img src="images/logo.png" class="logo" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
         </nav>
         <div class="header-text">
-          <p>Aspiring  Engineer</p>
+          <p>Aspiring Engineer</p>
           <h1>Hi,I'm <span>Raushan Raj</span></h1>
         </div>
       </div>
     </div>
 
+    <!-- about -->
 
-   <!-- about -->
-    
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/user.png" alt="" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              hic nesciunt provident quasi natus ea itaque animi laborum
+              doloremque sed. Amet hic iure sit quae assumenda. Ab pariatur
+              nihil fuga? Aut est quo accusamus expedita maxime porro magni
+              laudantium nisi culpa non dolore optio eligendi, eum, at
+              voluptatibus nulla incidunt corporis. Illo excepturi, nam natus
+              provident in harum libero cupiditate? Architecto, in impedit
+              itaque cumque natus distinctio odio molestiae temporibus beatae
+              aliquam tempore ipsam dicta aut illum optio vitae rerum
+              exercitationem nam odit corrupti provident. Quibusdam facilis
+              corporis praesentium quia. Id repellat dignissimos earum fugit,
+              alias error eaque consequatur, hic aspernatur iure praesentium
+              reiciendis! Inventore sequi atque reprehenderit, perspiciatis
+              numquam officiis enim eaque dicta nulla, dolores nostrum est,
+              minus libero.
+            </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="funct('Skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="funct('Experience')">Experience</p>
+              <p class="tab-links" onclick="funct('Education')">Education</p>
+            </div>
+            <!-- ---skills--- -->
+            <div class="tab-contents active-tab" id="Skills">
+              <ul>
+                <li><span>UI/UX</span><br />Designing</li>
+                <li><span>WebDEvelopment</span><br />Designing</li>
+                <li><span>UI/UX</span><br />Designing</li>
+              </ul>
+            </div>
+            <!-- ---Experience--- -->
+            <div class="tab-contents" id="Experience">
+              <ul>
+                <li><span>UI/UX</span><br />Designing</li>
+                <li><span>opment</span><br />Designing</li>
+                <li><span>UI/UX</span><br />Designing</li>
+              </ul>
+            </div>
+            <!-- ---Education--- -->
+            <div class="tab-contents" id="Education">
+              <ul>
+                <li><span>hb</span><br />Designing</li>
+                <li><span>WebDEvelopment</span><br />Designing</li>
+                <li><span>UI/UX</span><br />Designing</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
+<!-- ---------------------------------------services--------------------- -->
+
+<div id="services"></div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- -----------------------------------script---------------- -->
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function funct(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
   </body>
 </html>
